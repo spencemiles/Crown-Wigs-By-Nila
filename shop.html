@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WigShop - Buy Quality Wigs Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+    background: linear-gradient(90deg, #14532d, #d4af37); /* Deep green to luxury gold */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    transition: background 0.3s ease;
+}
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+            display: flex;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .search-bar button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .filter-section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .filter-item select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-left: 5px;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-name {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            height: 40px;
+            overflow: hidden;
+        }
+        
+        .product-price {
+    font-weight: bold;
+    color: #050505; /* Vibrant gold-green */
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #eff61e, 0 0 10px #d4af37; /* Subtle gold glow */
+    font-size: 1.2rem;
+}
+
+        
+        .product-original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        .product-discount {
+            color: #44c520;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        
+        .product-rating {
+            color: #ffc802;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding: 8px;
+            background-color: #08e033;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ddd;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f8f8f8;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       background: linear-gradient(135deg, #bfa93c, #1e8e5a);;
+      color: #fff;
+      padding: 0.5rem;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: #f0a500;
+    }
+
+    .mobile-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      padding: 2rem 1rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .mobile-menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .mobile-menu ul li a:hover,
+    .mobile-menu ul li a.active {
+      color: #f0a500;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none;
+      }
+
+      .mobile-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+   <a href="#" class="logo">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngCEQYQmLzTkoARwGsqnG7uuvgu5L8PtN7w&s" alt="Crown Wigs By Nila Logo">
+  <span class="logo-text" style="color: #f5f5f5;">Crown Wigs By Nila</span>
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #fdfdfd;
+    white-space: nowrap;
+  }
+
+  .logo img {
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+
+  .logo-text {
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 16px;
+      padding: 0.5rem 0.75rem;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .logo-text {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      font-size: 22px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+  }
+</style>
+
+
+    <!-- Desktop Menu -->
+    <ul class="nav-menu desktop-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+
+    <!-- Mobile Icon -->
+    <div class="mobile-icon" id="mobile-icon">&#8942;</div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const mobileIcon = document.getElementById("mobile-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    mobileIcon.addEventListener("click", () => {
+      mobileMenu.style.right = "0";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.style.right = "-100%";
+    });
+  </script>
+
+</body>
+</html>
+
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">Wigs</h1>
+        
+        <div class="filter-section">
+            <div class="filter-item">
+                <span>Sort by:</span>
+                <select>
+    <!-- Sorting Options -->
+    <option disabled selected>Sort By</option>
+    <option>Popularity</option>
+    <option>Newest</option>
+    <option>Price: Low to High</option>
+    <option>Price: High to Low</option>
+    <option>Customer Rating</option>
+    
+    <!-- Wig Categories -->
+    <option disabled>────────────</option>
+    <option>All Wigs</option>
+    <option>Human Hair Wigs</option>
+    <option>Synthetic Wigs</option>
+    <option>Lace Front Wigs</option>
+    <option>Curly Wigs</option>
+    <option>Long Wigs</option>
+    <option>Short Wigs</option>
+    <option>Color Collection</option>
+</select>
+
+            </div>
+            <div class="filter-item">
+                <span>Brand:</span>
+                <select>
+    <!-- Sorting Options -->
+    <option disabled selected>Sort By</option>
+    <option>Popularity</option>
+    <option>Newest</option>
+    <option>Price: Low to High</option>
+    <option>Price: High to Low</option>
+    <option>Customer Rating</option>
+
+    <!-- Category Separator -->
+    <option disabled>──────── Categories ────────</option>
+    <option>All Wigs</option>
+    <option>Human Hair Wigs</option>
+    <option>Synthetic Wigs</option>
+    <option>Lace Front Wigs</option>
+    <option>Curly Wigs</option>
+    <option>Long Wigs</option>
+    <option>Short Wigs</option>
+    <option>Color Collection</option>
+
+    <!-- Brand Separator -->
+    <option disabled>──────── Brands ────────</option>
+    <option>Crown Signature</option>
+    <option>Nila Luxe</option>
+    <option>Pure Volume</option>
+    <option>Silky Touch</option>
+    <option>Royal Curls</option>
+    <option>Blonde & Bold</option>
+    <option>Everyday Glam</option>
+    <option>Wig Essentials</option>
+</select>
+
+            </div>
+            <div class="filter-item">
+                <span>Price:</span>
+                <select>
+                    <option>All Prices</option>
+                    <option>Under KSh 1,000</option>
+                    <option>KSh 1,000 - KSh 3,000</option>
+                    <option>KSh 3,000 - KSh 5,000</option>
+                    <option>Over KSh 5,000</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/61H7i+7PDkL._AC_UF350,350_QL80_.jpg" alt="Loose Wave Wig">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Outre Synthetic Loose Wave Wig - 14 inches</div>
+                    <div class="product-price">KSh 12,499</div>
+                    <div>
+                        <span class="product-original-price">KSh 13,200</span>
+                        <span class="product-discount">-22%</span>
+                    </div>
+                    <div class="product-rating">★★★★☆ (24)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71MnAj8rUzL._SL1500_.jpg" alt="Straight Wig">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Hair Sensation Straight Bob Wig - 12 inches</div>
+                    <div class="product-price">KSh 13,000</div>
+                    <div>
+                        <span class="product-original-price">KSh 14,500</span>
+                        <span class="product-discount">-28%</span>
+                    </div>
+                    <div class="product-rating">★★★★★ (37)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71epSOQR-HL._AC_UF894,1000_QL80_.jpg" alt="Curly Wig">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Freetress Synthetic Curly Wig - 16 inches</div>
+                    <div class="product-price">KSh 13,200</div>
+                    <div>
+                        <span class="product-original-price">KSh 14,000</span>
+                        <span class="product-discount">-20%</span>
+                    </div>
+                    <div class="product-rating">★★★☆☆ (15)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71AF5USjywL.jpg" alt="Kinky Wig">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Model Model Kinky Twist Wig - 18 inches</div>
+                    <div class="product-price">KSh 14,500</div>
+                    <div>
+                        <span class="product-original-price">KSh 15,800</span>
+                        <span class="product-discount">-22%</span>
+                    </div>
+                    <div class="product-rating">★★★★☆ (42)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://www.gosupps.com/media/catalog/product/cache/25/small_image/1500x1650/9df78eab33525d08d6e5fb8d27136e95/6/1/61aGSVCjnxL.jpg" alt="Pixie Wig">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Outre Synthetic Pixie Cut Wig - 10 inches</div>
+                    <div class="product-price">KSh 14,299</div>
+                    <div>
+                        <span class="product-original-price">KSh 15,800</span>
+                        <span class="product-discount">-28%</span>
+                    </div>
+                    <div class="product-rating">★★★★★ (56)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://perfectglowbeautypoint.co.ke/wp-content/uploads/2022/10/hair-5.jpg" alt="Body Wave Wig">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Hair Sensation Body Wave Wig - 20 inches</div>
+                    <div class="product-price">KSh 15,200</div>
+                    <div>
+                        <span class="product-original-price">KSh 16,500</span>
+                        <span class="product-discount">-20%</span>
+                    </div>
+                    <div class="product-rating">★★★★☆ (31)</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">How to Buy</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About WigShop</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Flash Sales</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Make Money With Us</h3>
+                <ul>
+                    <li><a href="#">Sell on WigShop</a></li>
+                    <li><a href="#">Become a Sales Consultant</a></li>
+                    <li><a href="#">Become a Logistics Partner</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Payment Methods</h3>
+                <ul>
+                    <li>MPESA</li>
+                    <li>VISA/Mastercard</li>
+                    <li>Pay on Delivery</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

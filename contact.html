@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Crown Wigs by Nila</title>
+    <style>
+/* Updated CSS for Crown Wigs by Nila */
+:root {
+    /* Color Palette */
+    --primary-color: #7a5c7a;        /* Deep mauve */
+    --primary-light: #9d7b9d;        /* Lighter mauve */
+    --secondary-color: #d4b8c7;      /* Dusty pink */
+    --accent-color: #c17e8f;        /* Rosy pink */
+    --accent-dark: #a05d6e;         /* Darker rose */
+    --dark-color: #3a2e3a;          /* Dark purple */
+    --light-color: #f9f4f7;         /* Very light pink */
+    --lighter-gray: #f8f9fa;        /* Off-white */
+    --light-gray: #e9ecef;          /* Light gray */
+    --medium-gray: #adb5bd;         /* Medium gray */
+    --text-color: #333;             /* Dark gray for text */
+    --text-light: #666;             /* Lighter text */
+    --white: #fff;
+    --black: #000;
+    
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+    
+    /* Typography */
+    --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    
+    /* Effects */
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 15px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-round: 50%;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: var(--dark-color);
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style-position: inside;
+    margin-bottom: var(--space-md);
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section {
+    padding: var(--space-xxl) 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-xxl);
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: var(--space-md) auto 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.crown {
+    color: var(--accent-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: var(--space-sm) 0;
+    transition: var(--transition);
+}
+
+.header-scrolled {
+    padding: var(--space-xs) 0;
+    box-shadow: var(--shadow-md);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.logo p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: -5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: var(--space-xl);
+}
+
+nav ul li a {
+    font-weight: 500;
+    color: var(--text-color);
+    position: relative;
+    font-size: 0.95rem;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: -5px;
+    left: 0;
+    transition: var(--transition);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.mobile-menu:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(58, 46, 58, 0.85), rgba(58, 46, 58, 0.85)), 
+                url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--light-color), transparent);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-xl);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Posts */
+.featured-posts {
+    padding: var(--space-xxl) 0;
+    background-color: var(--white);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.featured-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    height: 100%;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.main-featured {
+    grid-row: span 2;
+}
+
+.post-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover .post-image {
+    transform: scale(1.05);
+}
+
+.main-featured .post-image {
+    height: 400px;
+}
+
+.post-content {
+    padding: var(--space-lg);
+    background-color: var(--white);
+}
+
+.category {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.5px;
+}
+
+.featured-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.main-featured h3 {
+    font-size: 2rem;
+}
+
+.excerpt {
+    color: var(--text-light);
+    margin-bottom: var(--space-lg);
+}
+
+.read-more {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.read-more i {
+    margin-left: var(--space-xs);
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.read-more:hover i {
+    transform: translateX(3px);
+}
+
+/* Blog Posts Section */
+.blog-posts {
+    padding: var(--space-xxl) 0;
+    background-color: var(--light-color);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.blog-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.blog-card .post-image {
+    height: 200px;
+}
+
+.blog-card .post-content {
+    padding: var(--space-lg);
+}
+
+.blog-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-sm);
+}
+
+.meta {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+}
+
+.meta i {
+    margin-right: var(--space-xs);
+    color: var(--accent-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xxl);
+    gap: var(--space-xs);
+}
+
+.pagination a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pagination a:hover,
+.pagination a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: var(--space-xxl) 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.newsletter .container {
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--white);
+}
+
+.newsletter p {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: var(--space-md);
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.newsletter button {
+    border-radius: 0;
+    padding: var(--space-md) var(--space-xl);
+    background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter button:hover {
+    background-color: var(--accent-dark);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: var(--space-xxl) 0 0;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.footer-about h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-md);
+    color: var(--white);
+}
+
+.footer-about p {
+    margin-bottom: var(--space-md);
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.footer-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-md);
+    position: relative;
+    padding-bottom: var(--space-sm);
+    color: var(--white);
+}
+
+.footer-links h3::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--space-sm);
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.footer-contact p {
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: flex-start;
+    color: var(--secondary-color);
+}
+
+.footer-contact i {
+    margin-right: var(--space-sm);
+    color: var(--accent-color);
+    width: 20px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-md) 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+.legal-links {
+    margin-top: var(--space-sm);
+}
+
+.legal-links a {
+    color: var(--medium-gray);
+    margin: 0 var(--space-sm);
+    transition: var(--transition);
+}
+
+.legal-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Contact Page Specific Styles */
+.contact-hero {
+    background: linear-gradient(rgba(58, 46, 58, 0.9), rgba(58, 46, 58, 0.9)), 
+                url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+    position: relative;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.contact-section {
+    padding: var(--space-xxl) 0;
+    background-color: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.contact-form {
+    background-color: var(--light-color);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.contact-form:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-xl);
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+.contact-form h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+}
+
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-md);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-md);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(122, 92, 122, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-xl);
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: var(--space-sm);
+}
+
+.contact-info h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+}
+
+.info-card {
+    background-color: var(--light-color);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: flex-start;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-card i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-right: var(--space-md);
+    margin-top: 3px;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+    color: var(--primary-color);
+}
+
+.info-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.social-links h3 {
+    margin: var(--space-xl) 0 var(--space-md);
+    color: var(--dark-color);
+    font-size: 1.3rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--radius-round);
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px) scale(1.1);
+}
+
+.map-section {
+    padding: var(--space-xxl) 0;
+    background-color: var(--light-color);
+}
+
+.map-section h2 {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.map-container {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 450px;
+}
+
+.faq-section {
+    padding: var(--space-xxl) 0;
+    background-color: var(--white);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: var(--space-xxl);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--primary-light);
+}
+
+.faq-question {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    background-color: var(--light-color);
+    border: none;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background-color: #f0e6ee;
+}
+
+.faq-question i {
+    transition: var(--transition);
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 var(--space-lg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: var(--white);
+}
+
+.faq-answer p {
+    padding: var(--space-lg) 0;
+    color: var(--text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .featured-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .main-featured {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-featured {
+        grid-column: span 1;
+    }
+    
+    .contact-info {
+        margin-top: var(--space-xl);
+    }
+    
+    .section {
+        padding: var(--space-xl) 0;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: var(--space-md) 0;
+        box-shadow: var(--shadow-md);
+        z-index: 999;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: var(--space-sm) 0;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero h2,
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .newsletter h2 {
+        font-size: 2rem;
+    }
+    
+    .newsletter form {
+        flex-direction: column;
+        border-radius: var(--radius-md);
+    }
+    
+    .newsletter input {
+        border-radius: var(--radius-md);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .newsletter button {
+        border-radius: var(--radius-md);
+        width: 100%;
+    }
+    
+    .info-card {
+        flex-direction: column;
+    }
+    
+    .info-card i {
+        margin-bottom: var(--space-sm);
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .hero h2,
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p,
+    .contact-hero p {
+        font-size: 1rem;
+    }
+    
+    .contact-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form {
+        padding: var(--space-lg);
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f8f8f8;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       background: linear-gradient(135deg, #bfa93c, #1e8e5a);;
+      color: #fff;
+      padding: 0.5rem;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: #f0a500;
+    }
+
+    .mobile-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      padding: 2rem 1rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .mobile-menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .mobile-menu ul li a:hover,
+    .mobile-menu ul li a.active {
+      color: #f0a500;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none;
+      }
+
+      .mobile-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+   <a href="#" class="logo">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngCEQYQmLzTkoARwGsqnG7uuvgu5L8PtN7w&s" alt="Crown Wigs By Nila Logo">
+  <span class="logo-text" style="color: #f8f8f8;">Crown Wigs By Nila</span>
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #fdfdfd;
+    white-space: nowrap;
+  }
+
+  .logo img {
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+
+  .logo-text {
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 16px;
+      padding: 0.5rem 0.75rem;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .logo-text {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      font-size: 22px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+  }
+</style>
+
+
+    <!-- Desktop Menu -->
+      <ul class="nav-menu desktop-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+
+    <!-- Mobile Icon -->
+    <div class="mobile-icon" id="mobile-icon">&#8942;</div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="blog.html" >Blog</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const mobileIcon = document.getElementById("mobile-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    mobileIcon.addEventListener("click", () => {
+      mobileMenu.style.right = "0";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.style.right = "-100%";
+    });
+  </script>
+
+</body>
+</html>
+
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you! Whether you have questions about our products or need styling advice, our team is here to help.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="order">Order Status</option>
+                                <option value="styling">Styling Advice</option>
+                                <option value="care">Care Instructions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Visit Us</h3>
+                        <p>123 Beauty Avenue<br>Hair City, HC 12345</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567<br>Mon-Fri: 9am-6pm EST</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>hello@crownwigsbynila.com<br>support@crownwigsbynila.com</p>
+                    </div>
+                    <div class="social-links">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209132713!2d-73.98784492453336!3d40.75798597138945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1689876832547!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">What are your business hours?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Our customer service team is available Monday through Friday from 9:00 AM to 6:00 PM EST. You can reach us by phone, email, or through our contact form during these hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does it take to get a response?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent matters, we recommend calling us directly during business hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer virtual consultations?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer free 15-minute virtual consultations to help you choose the perfect wig. Book your consultation through our contact form by selecting "Styling Advice" as your subject.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What's your return policy?<i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>We accept returns within 14 days of purchase for unused, unaltered wigs in their original packaging. Please contact us for a return authorization before sending any items back.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3><span class="crown">Crown</span> Wigs by Nila</h3>
+                    <p>Your trusted source for wig education, care tips, and styling inspiration. Helping you find and maintain your perfect crown since 2018.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Nila</a></li>
+                        <li><a href="#">Wig Gallery</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Wig Care</a></li>
+                        <li><a href="#">Styling</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Product Reviews</a></li>
+                        <li><a href="#">Trends</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> hello@crownwigsbynila.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Beauty Ave, Hair City, HC 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Crown Wigs by Nila. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion Functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            
+            if (this.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0';
+            }
+            
+            // Close other open FAQs
+            faqQuestions.forEach(item => {
+                if (item !== this && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.nextElementSibling.style.maxHeight = '0';
+                }
+            });
+        });
+    });
+    
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Simple validation
+            if (name === '' || email === '' || subject === '' || message === '') {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show a success message
+            alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+    }
+    
+    // Phone number formatting
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            // Remove all non-digit characters
+            let phoneNumber = this.value.replace(/\D/g, '');
+            
+            // Format as (XXX) XXX-XXXX
+            if (phoneNumber.length > 3 && phoneNumber.length <= 6) {
+                phoneNumber = phoneNumber.replace(/(\d{3})(\d{1,3})/, '($1) $2');
+            } else if (phoneNumber.length > 6) {
+                phoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{1,4})/, '($1) $2-$3');
+            }
+            
+            this.value = phoneNumber;
+        });
+    }
+});
+    </script>
+</body>
+</html>

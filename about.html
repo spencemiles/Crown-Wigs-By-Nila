@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Crown Wigs by Nila</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .logo img {
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #c5a47e;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.5), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'));
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Story Section */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 5rem 0;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .milestones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .milestone {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .milestone .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #c5a47e;
+        }
+
+        /* Founder Section */
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            padding: 5rem 0;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .founder-quote {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            right: 20px;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .member-image {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .member-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .story-grid,
+            .founder-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Menu</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #f8f8f8;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     background: linear-gradient(135deg, #bfa93c, #1e8e5a);;
+    color: #fff;
+    padding: 0.3rem 0.5rem; /* Reduced height */
+    position: relative;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .logo img {
+    height: 34px; /* Reduced image height */
+    width: auto;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+    color: #f0a500;
+  }
+
+  .mobile-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    padding: 2rem 1rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .mobile-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .mobile-menu ul li a:hover,
+  .mobile-menu ul li a.active {
+    color: #f0a500;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+
+    .mobile-icon {
+      display: block;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <nav class="navbar">
+   <a href="#" class="logo">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngCEQYQmLzTkoARwGsqnG7uuvgu5L8PtN7w&s" alt="Crown Wigs By Nila Logo">
+  <span class="logo-text" style="color: #f8f8f8;">Crown Wigs By Nila</span>
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #fdfdfd;
+    white-space: nowrap;
+  }
+
+  .logo img {
+    height: 45px;
+    width: auto;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+
+  .logo-text {
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 16px;
+      padding: 0.5rem 0.75rem;
+      gap: 8px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .logo-text {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      font-size: 22px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+  }
+</style>
+
+
+    <!-- Desktop Menu -->
+    <ul class="nav-menu desktop-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">shop</a></li>
+      <li><a href="about.html"  class="active">About</a></li>
+      <li><a href="contact.html">Contsct</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+
+    <!-- Mobile Icon -->
+    <div class="mobile-icon" id="mobile-icon">&#8942;</div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">shop</a></li>
+      <li><a href="about.html"  class="active">About</a></li>
+      <li><a href="contact.html">Contsct</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const mobileIcon = document.getElementById("mobile-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    mobileIcon.addEventListener("click", () => {
+      mobileMenu.style.right = "0";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.style.right = "-100%";
+    });
+  </script>
+
+</body>
+</html>
+
+
+    
+
+    <section class="our-story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <h2 class="section-title">From Humble Beginnings</h2>
+                    <p>Crown Wigs by Nila began in 2015 as a small boutique in downtown Hair City, founded by Nila Johnson with a vision to create high-quality, natural-looking wigs that empower women. What started as a passion project quickly grew into a thriving business as word spread about our exceptional craftsmanship.</p>
+                    <p>In our early days, we handcrafted each wig in a tiny studio, personally consulting with every client to understand their needs. Today, while we've grown significantly, we still maintain that personal touch and commitment to quality that defined us from the beginning.</p>
+                    <div class="milestones">
+                        <div class="milestone">
+                            <span class="number">2015</span>
+                            <p>Founded in small studio</p>
+                        </div>
+                        <div class="milestone">
+                            <span class="number">500+</span>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="milestone">
+                            <span class="number">50+</span>
+                            <p>Wig Styles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Our first small boutique location">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Nila Johnson, Founder">
+                    <div class="founder-quote">
+                        <p>"Every woman deserves to feel confident and beautiful in her own skin - and sometimes that starts with the perfect crown."</p>
+                        <span>- Nila Johnson</span>
+                    </div>
+                </div>
+                <div class="founder-bio">
+                    <h2 class="section-title">Meet Nila Johnson</h2>
+                    <p>Nila's journey in the hair industry began unexpectedly after she lost her own hair due to medical treatments. Frustrated by the lack of natural-looking, comfortable wigs available, she set out to create her own solutions.</p>
+                    <p>With a background in cosmetology and a passion for helping others, Nila combines technical expertise with deep empathy for her clients' needs. Her personal experience gives her unique insight into what women really want from their wigs.</p>
+                    <p>When she's not designing new styles or consulting with clients, Nila leads workshops for women undergoing chemotherapy and hosts a popular YouTube channel sharing wig care tips.</p>
+                    <div class="founder-signature">
+                        <img src="https://i.ibb.co/6n7PqGx/signature.png" alt="Nila's Signature">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Expert Team</h2>
+            <p class="section-subtitle">The talented professionals behind Crown Wigs</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Marcus Chen">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <h3>Marcus Chen</h3>
+                    <p class="position">Master Stylist</p>
+                    <p class="bio">With 15 years in celebrity hairstyling, Marcus brings Hollywood glamour to our wig designs.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Aisha Williams">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <h3>Aisha Williams</h3>
+                    <p class="position">Client Specialist</p>
+                    <p class="bio">Aisha's warm approach helps clients find their perfect match with confidence.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="David Rodriguez">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <h3>David Rodriguez</h3>
+                    <p class="position">Product Developer</p>
+                    <p class="bio">David innovates our materials and construction techniques for ultimate comfort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">What makes Crown Wigs different</p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Empathy First</h3>
+                    <p>We understand the emotional journey of hair loss and approach every client with compassion.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Craftsmanship</h3>
+                    <p>Each wig is handcrafted with premium materials and meticulous attention to detail.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Continuous Innovation</h3>
+                    <p>We're always researching and developing new techniques for more natural-looking wigs.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>We donate 5% of profits to organizations supporting women with medical hair loss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+/* General Section Styling */
+.values-section {
+  background: #fff8f2;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.values-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 3rem;
+}
+
+/* Grid layout for value cards */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Value Card Styling */
+.value-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: #f0a500;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Client Love</h2>
+            <p class="section-subtitle">What our clients say about us</p>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>After my chemotherapy, I struggled to find a wig that didn't look artificial. Crown Wigs changed everything for me - I finally feel like myself again.</p>
+                        <div class="client">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sarah M.">
+                            <div class="client-info">
+                                <h4>Sarah M.</h4>
+                                <p>Breast Cancer Survivor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>As a busy executive, I don't have time for daily styling. My Crown Wig gives me perfect hair every morning in seconds. It's completely changed my routine.</p>
+                        <div class="client">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Jennifer K.">
+                            <div class="client-info">
+                                <h4>Jennifer K.</h4>
+                                <p>Finance Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>I've worn wigs for alopecia for 10 years, and none compare to the comfort and realism of Crown Wigs. Nila and her team truly understand our needs.</p>
+                        <div class="client">
+                            <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tanya R.">
+                            <div class="client-info">
+                                <h4>Tanya R.</h4>
+                                <p>Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+.testimonials-section {
+  background: #fff0e6;
+  padding: 4rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.testimonials-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 3rem;
+}
+
+/* Slider Wrapper */
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Testimonials */
+.testimonial {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+/* Quote Content */
+.quote {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  position: relative;
+}
+
+.quote i {
+  font-size: 1.5rem;
+  color: #f0a500;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+/* Client Info */
+.client {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.client img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 3px solid #f0a500;
+}
+
+.client-info h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #222;
+}
+
+.client-info p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #888;
+}
+
+/* Slider Controls */
+.slider-controls {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slider-controls button {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: #f0a500;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.slider-controls button:hover {
+  transform: scale(1.2);
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #f0a500;
+}
+</style>
+<script>
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+let index = 0;
+
+function showTestimonial(i) {
+  testimonials.forEach((el, idx) => {
+    el.classList.toggle("active", idx === i);
+    dots[idx].classList.toggle("active", idx === i);
+  });
+}
+
+next.addEventListener("click", () => {
+  index = (index + 1) % testimonials.length;
+  showTestimonial(index);
+});
+
+prev.addEventListener("click", () => {
+  index = (index - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(index);
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    index = i;
+    showTestimonial(index);
+  });
+});
+</script>
+
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Find Your Perfect Crown?</h2>
+            <p>Book a free consultation with our wig specialists today</p>
+            <a href="contact.html" class="btn">Schedule Consultation</a>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <footer class="footer-section">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- About Section -->
+      <div class="footer-about">
+        <h3><span class="highlight">Crown</span> Wigs by Nila</h3>
+        <p>
+          Your trusted source for wig education, care tips, and styling inspiration. Helping you find and maintain your perfect crown since 2015.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Wig Types</a></li>
+          <li><a href="#">Care Tips</a></li>
+          <li><a href="#">Styling</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Wig Care</a></li>
+          <li><a href="#">Styling</a></li>
+          <li><a href="#">Installation</a></li>
+          <li><a href="#">Product Reviews</a></li>
+          <li><a href="#">Trends</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> hello@crownwigsbynila.com</p>
+        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Beauty Ave, Hair City, HC 12345</p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2023 <strong>Crown Wigs by Nila</strong>. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+.footer-section {
+  background: linear-gradient(145deg, #fff7f0, #fce8df);
+  padding: 4rem 1.5rem 2rem;
+  color: #5b4b45;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-about h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.footer-about .highlight {
+  color: #cc7a00;
+  font-weight: 700;
+}
+
+.footer-about p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  background: #cc7a00;
+  color: #fff;
+  margin-right: 8px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #a85e00;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #5b4b45;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #cc7a00;
+}
+
+.footer-contact p {
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+}
+
+.footer-contact i {
+  margin-right: 8px;
+  color: #cc7a00;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid #e0cfc3;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.legal-links a {
+  margin-left: 1rem;
+  color: #5b4b45;
+  text-decoration: none;
+}
+
+.legal-links a:hover {
+  color: #cc7a00;
+}
+
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+</style>
+
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+    
+    // Show initial testimonial
+    showTestimonial(currentIndex);
+    
+    // Dot click event
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            showTestimonial(currentIndex);
+            updateDots(currentIndex);
+        });
+    });
+    
+    // Previous button click
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonials.length - 1;
+        showTestimonial(currentIndex);
+        updateDots(currentIndex);
+    });
+    
+    // Next button click
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
+        showTestimonial(currentIndex);
+        updateDots(currentIndex);
+    });
+    
+    // Auto-rotate testimonials
+    let slideInterval = setInterval(() => {
+        currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
+        showTestimonial(currentIndex);
+        updateDots(currentIndex);
+    }, 5000);
+    
+    // Pause on hover
+    const slider = document.querySelector('.testimonials-slider');
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+            currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
+            showTestimonial(currentIndex);
+            updateDots(currentIndex);
+        }, 5000);
+    });
+    
+    // Show testimonial function
+    function showTestimonial(index) {
+        testimonials.forEach(testimonial => {
+            testimonial.classList.remove('active');
+        });
+        testimonials[index].classList.add('active');
+    }
+    
+    // Update dots function
+    function updateDots(index) {
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        dots[index].classList.add('active');
+    }
+    
+    // Team member hover animation
+    const teamMembers = document.querySelectorAll('.team-member');
+    
+    teamMembers.forEach(member => {
+        member.addEventListener('mouseenter', () => {
+            const img = member.querySelector('.member-image img');
+            img.style.transform = 'scale(1.1)';
+        });
+        
+        member.addEventListener('mouseleave', () => {
+            const img = member.querySelector('.member-image img');
+            img.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Milestone counter animation
+    const milestones = document.querySelectorAll('.milestone');
+    
+    const animateMilestones = () => {
+        milestones.forEach(milestone => {
+            const numberElement = milestone.querySelector('.number');
+            const targetNumber = parseInt(numberElement.textContent);
+            let currentNumber = 0;
+            const increment = targetNumber / 20;
+            
+            const updateNumber = () => {
+                if (currentNumber < targetNumber) {
+                    currentNumber += increment;
+                    numberElement.textContent = Math.floor(currentNumber);
+                    requestAnimationFrame(updateNumber);
+                } else {
+                    numberElement.textContent = targetNumber;
+                }
+            };
+            
+            updateNumber();
+        });
+    };
+    
+    // Only animate when milestones are in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateMilestones();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const milestonesSection = document.querySelector('.our-story');
+    if (milestonesSection) {
+        observer.observe(milestonesSection);
+    }
+});
+   </script>
+</body>
+</html>
