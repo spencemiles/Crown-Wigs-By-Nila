@@ -5,449 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crown Wigs - Virtual Try-On</title>
     <style>
-        :root {
-    --gold: #D4AF37;
-    --gold-light: #F5D98F;
-    --green: #2E8B57;
-    --dark: #333333;
-    --light: #F8F8F8;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+        /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff9f5;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Container Layout */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
-    height: 50px;
-    width: auto;
+  height: 60px;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: var(--dark);
+.logo-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #b47c59;
 }
 
-.try-on-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    background-color: var(--dark);
-}
-
-video, canvas {
-    width: 100%;
-    height: auto;
-    display: block;
-    transform: scaleX(-1);
-}
-
-.upload-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.upload-content {
-    text-align: center;
-    padding: 20px;
-    max-width: 80%;
-}
-
-.upload-content p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.controls {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.mode-toggle {
-    display: flex;
-    justify-content: center;
-}
-
-.wig-selection {
-    text-align: center;
-}
-
-.wig-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.wig-thumbnail {
-    border: 2px solid transparent;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.wig-thumbnail:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
-}
-
-.wig-thumbnail.active {
-    border-color: var(--gold);
-    box-shadow: 0 0 15px var(--gold-light);
-}
-
-.wig-thumbnail img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn-gold, .btn-green, .btn-outline {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 180px;
-    text-align: center;
+/* Buttons */
+button,
+label.btn-gold {
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  text-align: center;
+  display: inline-block;
 }
 
 .btn-gold {
-    background-color: var(--gold);
-    color: white;
+  background-color: #b47c59;
+  color: white;
+  border: none;
 }
 
 .btn-gold:hover {
-    background-color: #C19A3B;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+  background-color: #a56f50;
 }
 
 .btn-green {
-    background-color: var(--green);
-    color: white;
+  background-color: #4caf50;
+  color: white;
+  border: none;
 }
 
 .btn-green:hover {
-    background-color: #267A4D;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+  background-color: #449d48;
 }
 
 .btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--gold);
-    color: var(--gold);
+  background: transparent;
+  color: #b47c59;
+  border: 2px solid #b47c59;
 }
 
 .btn-outline:hover {
-    background-color: rgba(212, 175, 55, 0.1);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+  background-color: #b47c59;
+  color: white;
 }
 
+/* Try-On Section */
+.try-on-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.video-container {
+  position: relative;
+  width: 640px;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+#video,
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 249, 245, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 5;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.upload-content p {
+  font-size: 18px;
+  color: #444;
+}
+
+#photo-upload {
+  display: none;
+}
+
+/* Controls */
+.controls {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mode-toggle {
+  text-align: center;
+}
+
+.wig-selection h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #b47c59;
+  margin-bottom: 10px;
+}
+
+.wig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+}
+
+.wig-thumbnail {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border 0.3s;
+  cursor: pointer;
+}
+
+.wig-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wig-thumbnail.active {
+  border-color: #b47c59;
+  box-shadow: 0 0 8px rgba(180, 124, 89, 0.5);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-buttons button {
+  flex: 1 1 45%;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .action-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn-gold, .btn-green, .btn-outline {
-        width: 100%;
-    }
+  .try-on-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
-}
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-       <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Menu</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: sans-serif;
-      
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-       background: linear-gradient(135deg, #bfa93c, #1e8e5a);;
-      color: #fff;
-      padding: 0.5rem;
-      position: relative;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-menu li a {
-      text-decoration: none;
-      color: white;
-      transition: color 0.3s ease;
-    }
-
-    .nav-menu li a:hover,
-    .nav-menu li a.active {
-      color: #f0a500;
-    }
-
-    .mobile-icon {
-      font-size: 1.8rem;
-      cursor: pointer;
-      display: none;
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 250px;
-      height: 100%;
-      background: #333;
-      padding: 2rem 1rem;
-      transition: right 0.3s ease-in-out;
-      z-index: 1000;
-    }
-
-    .mobile-menu ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin-top: 2rem;
-    }
-
-    .mobile-menu ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.1rem;
-    }
-
-    .mobile-menu ul li a:hover,
-    .mobile-menu ul li a.active {
-      color: #f0a500;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 2rem;
-      cursor: pointer;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .desktop-menu {
-        display: none;
-      }
-
-      .mobile-icon {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <nav class="navbar">
-   <a href="#" class="logo">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngCEQYQmLzTkoARwGsqnG7uuvgu5L8PtN7w&s" alt="Crown Wigs By Nila Logo">
-  <span class="logo-text" style="color: #f9f4f7;">Crown Wigs By Nila</span>
-</a>
-
-<style>
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 12px;
-    padding: 0.5rem 1rem;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #fdfdfd;
-    white-space: nowrap;
-  }
-
-  .logo img {
-    height: 45px;
-    width: auto;
-    border-radius: 6px;
-    vertical-align: middle;
-  }
-
-  .logo-text {
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-
-  @media (max-width: 480px) {
-    .logo {
-      font-size: 16px;
-      padding: 0.5rem 0.75rem;
-      gap: 8px;
-    }
-
-    .logo img {
-      height: 35px;
-    }
-
-    .logo-text {
-      font-size: 15px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .logo {
-      font-size: 22px;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-  }
-</style>
-
-
-    <!-- Desktop Menu -->
-    <ul class="nav-menu desktop-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-    </ul>
-
-    <!-- Mobile Icon -->
-    <div class="mobile-icon" id="mobile-icon">&#8942;</div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <div class="close-btn" id="close-btn">&times;</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-    </ul>
-  </div>
-
-  <script>
-    const mobileIcon = document.getElementById("mobile-icon");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const closeBtn = document.getElementById("close-btn");
-
-    mobileIcon.addEventListener("click", () => {
-      mobileMenu.style.right = "0";
-    });
-
-    closeBtn.addEventListener("click", () => {
-      mobileMenu.style.right = "-100%";
-    });
-  </script>
-
-</body>
-</html>
-<br>
-<strong>Select a wig below and open camera </strong>
-<p>This is a sample feature 50%</p>
-<p>Full feature coming soon </p>
-<br>
+        <header>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Crown Wigs" class="logo">
+                <h1>Virtual Wig Try-On</h1>
+            </div>
+            <button id="return-btn" class="btn-outline">← Back to Shop</button>
+        </header>
 
         <main>
             <div class="try-on-container">
@@ -456,16 +246,16 @@ video, canvas {
                     <canvas id="canvas"></canvas>
                     <div class="upload-overlay" id="upload-overlay">
                         <div class="upload-content">
-                            <p>Open camera to try on wigs</p>
-                            <!-- <input type="file" id="photo-upload" accept="image/*"> -->
-                            
+                            <p>Upload a photo to try on wigs</p>
+                            <input type="file" id="photo-upload" accept="image/*">
+                            <label for="photo-upload" class="btn-gold">Choose Photo</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="controls">
                     <div class="mode-toggle">
-                        <button id="toggle-mode" class="btn-gold">Open Camera</button>
+                        <button id="toggle-mode" class="btn-gold">Switch to Camera</button>
                     </div>
 
                     <div class="wig-selection">
