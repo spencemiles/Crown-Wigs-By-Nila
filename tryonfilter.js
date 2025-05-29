@@ -1,9 +1,9 @@
 // Sample wig data
 const WIG_DATA = [
     { id: 'wig1', name: 'Royal Curls', thumbnail: 'https://blog.turbosquid.com/wp-content/uploads/sites/2/2022/08/curly-2k-scaled.jpg?w=862', overlay: 'wig1-overlay' },
-    { id: 'wig2', name: 'Silky Straight', thumbnail: 'https://alurewigs.com/cdn/shop/files/Untitleddesign-2.png?v=1687202037', overlay: 'wig2-overlay' },
-    { id: 'wig3', name: 'Kinky Coils', thumbnail: 'https://www.privatelabelextensions.com/cdn/shop/files/afro-kinky-2x6-hd-closure-wig.jpg?v=1735327739', overlay: 'wig3-overlay' },
-    { id: 'wig4', name: 'Bouncy Bob', thumbnail: 'https://www.mycrownedwigs.com/1881-thickbox_default/brazilian-virgin-bounce-wave-bob-136-lace-frontal-wig-lf394-.jpg', overlay: 'wig4-overlay' }
+    { id: 'wig2', name: 'Silky Straight', thumbnail: 'assets/wigs/wig2-thumb.jpg', overlay: 'wig2-overlay' },
+    { id: 'wig3', name: 'Kinky Coils', thumbnail: 'assets/wigs/wig3-thumb.jpg', overlay: 'wig3-overlay' },
+    { id: 'wig4', name: 'Bouncy Bob', thumbnail: 'assets/wigs/wig4-thumb.jpg', overlay: 'wig4-overlay' }
 ];
 
 // DOM Elements
