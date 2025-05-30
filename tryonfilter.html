@@ -3,116 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
     <title>Crown Wigs - Virtual Try-On</title>
     <style>
         /* General Reset */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff9f5;
+  background: #fff9f5;
   color: #333;
   line-height: 1.6;
+  font-size: clamp(14px, 2.5vw, 16px);
 }
 
-/* Container Layout */
+/* LAYOUT */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: auto;
+  padding: 1rem;
 }
-
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
+/* LOGO */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.75rem;
 }
-
 .logo {
-  height: 60px;
+  height: 50px;
+  width: auto;
 }
-
 .logo-container h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: clamp(20px, 5vw, 28px);
   color: #b47c59;
 }
 
-/* Buttons */
+/* BUTTONS */
 button,
 label.btn-gold {
-  padding: 10px 20px;
+  padding: 0.65rem 1.2rem;
   border-radius: 6px;
-  cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
-  transition: background-color 0.3s;
-  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   display: inline-block;
+  text-align: center;
 }
-
 .btn-gold {
   background-color: #b47c59;
-  color: white;
+  color: #fff;
   border: none;
 }
-
 .btn-gold:hover {
   background-color: #a56f50;
 }
-
 .btn-green {
   background-color: #4caf50;
   color: white;
   border: none;
 }
-
 .btn-green:hover {
   background-color: #449d48;
 }
-
 .btn-outline {
   background: transparent;
   color: #b47c59;
   border: 2px solid #b47c59;
 }
-
 .btn-outline:hover {
   background-color: #b47c59;
-  color: white;
+  color: #fff;
 }
 
-/* Try-On Section */
+/* TRY-ON AREA */
 .try-on-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 2rem;
   justify-content: center;
 }
 
+/* VIDEO CONTAINER */
 .video-container {
   position: relative;
-  width: 640px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 640px;
   aspect-ratio: 4 / 3;
   border-radius: 10px;
   overflow: hidden;
   background-color: #ddd;
 }
-
 #video,
 #canvas {
   position: absolute;
@@ -120,94 +116,88 @@ label.btn-gold {
   height: 100%;
   object-fit: cover;
 }
-
 .upload-overlay {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(255, 249, 245, 0.95);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
   text-align: center;
-  padding: 20px;
-  z-index: 5;
+  z-index: 2;
 }
-
 .upload-content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
-
 .upload-content p {
-  font-size: 18px;
+  font-size: 1rem;
   color: #444;
 }
-
 #photo-upload {
   display: none;
 }
 
-/* Controls */
+/* CONTROLS */
 .controls {
-  flex: 1;
-  min-width: 300px;
-  max-width: 400px;
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2rem;
 }
-
 .mode-toggle {
   text-align: center;
 }
 
+/* WIG GRID */
 .wig-selection h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #b47c59;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
-
 .wig-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 12px;
+  gap: 0.75rem;
 }
-
 .wig-thumbnail {
   border: 2px solid transparent;
   border-radius: 6px;
   overflow: hidden;
-  transition: border 0.3s;
   cursor: pointer;
+  transition: border 0.3s;
 }
-
 .wig-thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .wig-thumbnail.active {
   border-color: #b47c59;
   box-shadow: 0 0 8px rgba(180, 124, 89, 0.5);
 }
 
+/* ACTION BUTTONS */
 .action-buttons {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1rem;
 }
-
 .action-buttons button {
   flex: 1 1 45%;
+  min-width: 120px;
 }
 
-/* Responsive */
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .try-on-container {
     flex-direction: column;
     align-items: center;
@@ -219,6 +209,7 @@ label.btn-gold {
 
   .action-buttons {
     flex-direction: column;
+    align-items: center;
   }
 
   .action-buttons button {
@@ -233,7 +224,8 @@ label.btn-gold {
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngCEQYQmLzTkoARwGsqnG7uuvgu5L8PtN7w&s" alt="Crown Wigs" class="logo">
+                <img src="assets/logo.png" alt="Crown Wigs" class="logo">
+                <h1>Virtual Wig Try-On</h1>
             </div>
             <button id="return-btn" class="btn-outline">← Back to Shop</button>
         </header>
@@ -244,13 +236,17 @@ label.btn-gold {
                     <video id="video" autoplay playsinline></video>
                     <canvas id="canvas"></canvas>
                     <div class="upload-overlay" id="upload-overlay">
-                        
+                        <div class="upload-content">
+                            <p>Upload a photo to try on wigs</p>
+                            <input type="file" id="photo-upload" accept="image/*">
+                            <label for="photo-upload" class="btn-gold">Choose Photo</label>
+                        </div>
                     </div>
                 </div>
 
                 <div class="controls">
                     <div class="mode-toggle">
-                        <button id="toggle-mode" class="btn-gold">Open to Camera</button>
+                        <button id="toggle-mode" class="btn-gold">Switch to Camera</button>
                     </div>
 
                     <div class="wig-selection">
